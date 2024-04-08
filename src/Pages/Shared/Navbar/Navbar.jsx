@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiFamilyHouse } from "react-icons/gi";
 
+
+
 const Navbar = () => {
     const navLink = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -39,9 +41,9 @@ const Navbar = () => {
                     <div className="dropdown dropdown-hover">
                         <div tabIndex={0} role="button" className="btn m-1">Login</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login with Email</button></Link>
-                        <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login with Google</button></Link>
-                            
+                            <Link to='/login'><button className="btn hover:bg-slate-800 hover:text-white">Login with Email</button></Link>
+                            <Link to='/googleLogin'><button className="btn hover:bg-slate-800 hover:text-white">Login with Google</button></Link>
+                            <Link to='/githubLogin'><button className="btn hover:bg-slate-800 hover:text-white">Login with Github</button></Link>
                         </ul>
                     </div>
                     {/* <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login</button></Link> */}
