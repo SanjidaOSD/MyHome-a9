@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import NotFound from "../Layout/NotFound";
 import GoogleLogin from "../Pages/GoogleLogin/GoogleLogin";
 import Github from "../Pages/Login/Github";
+import EmailLogin from "../Pages/Login/EmailLogin";
 
 
 
@@ -29,9 +30,13 @@ const routes = createBrowserRouter([
                 element:<Login></Login>
             },
             {
-               path:'/googleLogin',
-               element:<GoogleLogin></GoogleLogin>
+               path:'/emailLogin',
+               element:<EmailLogin></EmailLogin>
             },
+            // {
+            //    path:'/googleLogin',
+            //    element:<GoogleLogin></GoogleLogin>
+            // },
             {
                 path:'/githubLogin',
                 element:<Github></Github>
