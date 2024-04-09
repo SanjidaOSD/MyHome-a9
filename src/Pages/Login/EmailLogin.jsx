@@ -28,6 +28,7 @@ const EmailLogin = () => {
 
     return (
         <div>
+            <h2 className="text-3xl text-center mt-6 mb-6 font-bold">Login Form</h2>
              <div className="card shrink-0 w-full max-w-sm mx-auto shadow-2xl p-4">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">

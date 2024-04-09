@@ -1,5 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiFamilyHouse } from "react-icons/gi";
+import UseAuth from "../../../Hooks/UseAuth";
+import { FaUserLarge } from "react-icons/fa6";
+
 
 
 
@@ -12,6 +15,7 @@ const Navbar = () => {
 
     </>
 
+    const { logout, user } = UseAuth()
 
     return (
         <div>
@@ -38,15 +42,28 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
-                    {/* <div className="dropdown dropdown-hover">
-                        <div tabIndex={0} role="button" className="btn m-1">Login</div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <Link to='/login'><button className="btn hover:bg-slate-800 hover:text-white">Login with Email</button></Link>
-                            <Link to='/googleLogin'><button className="btn hover:bg-slate-800 hover:text-white">Login with Google</button></Link>
-                            <Link to='/githubLogin'><button className="btn hover:bg-slate-800 hover:text-white">Login with Github</button></Link>
-                        </ul>
-                    </div> */}
-                    <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login</button></Link>
+                    {
+                        user?.email ? <div className="dropdown dropdown-hover">
+                            <div tabIndex={0} role="button" className="btn m-1">
+                                <div className="w-10 rounded-full">
+                                    <FaUserLarge />
+
+                                </div>
+                            </div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-ghost">Sanjida</button>
+                                </li>
+                                <li>
+                                    <button onClick={logout} className="btn btn-ghost">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login</button></Link>
+
+                    }
+
                 </div>
             </div>
         </div>

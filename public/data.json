@@ -9,7 +9,7 @@
       "area": "2000 sq. ft.",
       "location": "Downtown, City X",
       "facilities": ["Swimming pool", "Gym", "24/7 Security"],
-      "image": "https://example.com/image1.jpg"
+      "image": "https://i.ibb.co/y5567yH/luxury-home-389263-640.jpg"
     },
     {
       "id": "2",
@@ -21,7 +21,7 @@
       "area": "1800 sq. ft.",
       "location": "Suburbia Estates, City Y",
       "facilities": ["Community pool", "Tennis courts", "Playground"],
-      "image": "https://example.com/image2.jpg"
+      "image": "https://i.ibb.co/B6TcWC5/large-home-389271-640.jpg"
     },
     {
       "id": "3",
@@ -33,7 +33,7 @@
       "area": "2200 sq. ft.",
       "location": "Family Haven, City Z",
       "facilities": ["Fenced yard", "Outdoor dining area", "Fireplace"],
-      "image": "https://example.com/image3.jpg"
+      "image": "https://i.ibb.co/T8ts0ZP/window-7169327-640.jpg"
     },
     {
       "id": "4",
@@ -45,7 +45,7 @@
       "area": "500 sq. ft. (per unit)",
       "location": "University Campus, City X",
       "facilities": ["Study lounges", "Fitness center", "Laundry facilities"],
-      "image": "https://example.com/image4.jpg"
+      "image": "https://i.ibb.co/nMHXZdN/furniture-998265-640.jpg"
     },
     {
       "id": "5",
@@ -57,7 +57,7 @@
       "area": "1200 sq. ft. (per unit)",
       "location": "Elderly Haven, City Y",
       "facilities": ["Community clubhouse", "Scheduled transportation", "On-site healthcare"],
-      "image": "https://example.com/image5.jpg"
+      "image": "https://i.ibb.co/k15cQgb/house-1477041-640.jpg"
     },
     {
       "id": "6",
@@ -69,7 +69,7 @@
       "area": "1000 sq. ft.",
       "location": "Seaside Retreat, City Z",
       "facilities": ["Private beach access", "Outdoor grill", "Oceanfront balcony"],
-      "image": "https://example.com/image6.jpg"
+      "image": "https://i.ibb.co/jDw0Ngq/house-1836070-640.jpg"
     }
   ]
   
