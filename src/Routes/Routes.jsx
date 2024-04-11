@@ -8,6 +8,7 @@ import NotFound from "../Layout/NotFound";
 import GoogleLogin from "../Pages/GoogleLogin/GoogleLogin";
 import Github from "../Pages/Login/Github";
 import EmailLogin from "../Pages/Login/EmailLogin";
+import CardDetails from "../Pages/CardDetails";
 
 
 
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
                 element:<Home></Home>
             },
             {
+                path:'/cards/:id',
+                element:<CardDetails></CardDetails>
+            },
+            {
                 path:'/about',
                 element:<About></About>
             },
@@ -33,10 +38,6 @@ const routes = createBrowserRouter([
                path:'/emailLogin',
                element:<EmailLogin></EmailLogin>
             },
-            // {
-            //    path:'/googleLogin',
-            //    element:<GoogleLogin></GoogleLogin>
-            // },
             {
                 path:'/githubLogin',
                 element:<Github></Github>

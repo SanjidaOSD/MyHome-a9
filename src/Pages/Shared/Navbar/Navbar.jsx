@@ -1,12 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { GiFamilyHouse } from "react-icons/gi";
 import UseAuth from "../../../Hooks/UseAuth";
-import { FaUserLarge } from "react-icons/fa6";
+// import { FaUserLarge } from "react-icons/fa6";
+// import { useState } from "react";
 
 
 
 
 const Navbar = () => {
+
     const navLink = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About us</NavLink></li>
@@ -14,6 +16,9 @@ const Navbar = () => {
         <li><NavLink>Home</NavLink></li> */}
 
     </>
+
+
+// const [loginUser, setLoginUser] = useState(null)
 
     const { logout, user } = UseAuth()
 
@@ -31,7 +36,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex">
-                        <a className="btn btn-ghost text-xl"><GiFamilyHouse />MyHome</a>
+                        <a className="btn btn-ghost text-3xl"><GiFamilyHouse />MyHome</a>
 
                     </div>
                 </div>
@@ -46,13 +51,14 @@ const Navbar = () => {
                         user?.email ? <div className="dropdown dropdown-hover">
                             <div tabIndex={0} role="button" className="btn m-1">
                                 <div className="w-10 rounded-full">
-                                    <FaUserLarge />
+                                    {/* <FaUserLarge /> */}
+                                    <img className="rounded-full" src={user.photoURL} alt="" />
 
                                 </div>
                             </div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li>
-                                    <button className="btn btn-ghost">Sanjida</button>
+                                    <button className="btn btn-ghost">{user.displayName}</button>
                                 </li>
                                 <li>
                                     <button onClick={logout} className="btn btn-ghost">Logout</button>

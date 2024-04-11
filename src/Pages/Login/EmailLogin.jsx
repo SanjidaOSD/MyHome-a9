@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import UseAuth from "../../Hooks/UseAuth";
 import { Link } from "react-router-dom";
+// import { useState } from "react";
 
 const EmailLogin = () => {
 
     const {signInUser} = UseAuth();
+    // const [loginError, setLoginError] = useState('');
 
 
     const {

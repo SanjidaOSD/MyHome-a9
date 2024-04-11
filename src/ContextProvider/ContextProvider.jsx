@@ -43,11 +43,14 @@ const ContextProvider = ({ children }) => {
 
     // observer
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unSubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
             }
         });
+        return()=>{
+            unSubscribe();
+        }
     }, [])
 
 

@@ -1,7 +1,4 @@
-// import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../../ContextProvider/ContextProvider";
-import { useForm } from "react-hook-form";
 import UseAuth from "../../Hooks/UseAuth";
 import GoogleLogin from "../GoogleLogin/GoogleLogin";
 import Github from "./Github";
@@ -11,11 +8,7 @@ const Login = () => {
     const { signInUser } = UseAuth();
 
 
-    // const {
-    //     register,
-    //     handleSubmit,
-    //     formState: { errors },
-    // } = useForm()
+    
     const onSubmit = data => {
         // console.log(data)
         const { email, password } = data;
@@ -23,7 +16,6 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                // Handle successful sign-in (e.g., redirect user)
             })
             .catch(error => {
                 console.log(error);
