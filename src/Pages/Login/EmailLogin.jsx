@@ -9,8 +9,8 @@ import { useState } from "react";
 const EmailLogin = () => {
 
     const { signInUser } = UseAuth();
-    // const [loginError, setLoginError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
     const location = useLocation();
     const navigate = useNavigate();
     console.log('location in the login page', location)
@@ -29,7 +29,7 @@ const EmailLogin = () => {
             .then(result => {
                 console.log(result.user);
                 
-                navigate(location?.state ? location.state : "/");
+                navigate(location?.state ? location.state : '/');
 
                 // Handle successful sign-in (e.g., redirect user)
             })

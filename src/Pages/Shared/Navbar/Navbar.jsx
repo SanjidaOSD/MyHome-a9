@@ -51,7 +51,7 @@ const Navbar = () => {
                             <div tabIndex={0} role="button" className="btn m-1">
                                 <div className="w-10 rounded-full">
                                     {/* <FaUserLarge /> */}
-                                    <button onClick={logout} className="btn btn-ghost bg-slate-500">Logout</button>
+                                    <button onClick={logout} className="btn btn-ghost hover:bg-slate-500 bg-slate-500">Logout</button>
 
                                     {/* <img className="rounded-full" src={user.photoURL} alt="" /> */}
 

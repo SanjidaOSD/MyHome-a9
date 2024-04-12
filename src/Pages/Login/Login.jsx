@@ -16,9 +16,6 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                
-
-                // navigate after login
-
             })
             .catch(error => {
                 console.log(error);
