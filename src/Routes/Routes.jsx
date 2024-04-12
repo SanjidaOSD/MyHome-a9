@@ -10,6 +10,7 @@ import Github from "../Pages/Login/Github";
 import EmailLogin from "../Pages/Login/EmailLogin";
 import CardDetails from "../Pages/CardDetails";
 import PrivetRoutes from "./PrivetRoutes";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 
 
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
             {
                 path:'/about',
                 element:<About></About>
+            },
+            {
+               path:'/contact',
+               element:<PrivetRoutes><ContactUs></ContactUs></PrivetRoutes>
             },
             {
                 path:'/login',
