@@ -1,13 +1,16 @@
-// import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useForm } from "react-hook-form";
 import UseAuth from "../../Hooks/UseAuth";
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+// import { ToastContainer, toast } from 'react-toastify';
+
 
 const Register = () => {
-    const [registerError, setRegisterError] = useState('');
-    const [success, setSuccess] = useState('');
+    const [registerError, setRegisterError] = useState(' ');
+    const [success, setSuccess] = useState(' ');
+    const [showPassword, setShowPassword] = useState(false);
 
     const { createUser } = UseAuth();
 
@@ -16,32 +19,45 @@ const Register = () => {
         register,
         handleSubmit,
         formState: { errors },
+
     } = useForm()
 
 
     const onSubmit = data => {
 
-if (password.length < 6){
-    setRegisterError('password should be at-least 6 character or longer');
-    return;
-}
+        //  console.log(data)
+        const { email, password } = data;
+
+        if (password.length < 6) {
+            setRegisterError('password should be at-least 6 character or longer')
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setRegisterError('Your password should have one upper case character')
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            setRegisterError('Your password should have one lower case character')
+            return;
+        }
 
 
         setRegisterError('');
-                setSuccess('');
-        //  console.log(data)
-        const { email, password } = data;
+        setSuccess('');
+
         createUser(email, password)
 
 
             .then(result => {
                 console.log(result.user)
                 setSuccess('User created successfully')
+
             })
             .catch(error => {
                 console.log(error)
                 setRegisterError(error.message);
             })
+
     }
 
     return (
@@ -79,14 +95,28 @@ if (password.length < 6){
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" name="password" className="input input-bordered bg-slate-200"
-                            {...register("password", { required: true })}
-                        />
-                        {errors.password && <span className="text-red-800">This field is required</span>}
+                        <div className="relative">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                placeholder="password" name="password"
+                                className="input input-bordered w-full bg-slate-200"
+                                {...register("password", { required: true })}
+                            />
+                            <span className="absolute top-4 right-3" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
+                                }
+                            </span>
+                            {errors.password && <span className="text-red-800">This field is required</span>}
+                        </div>
                         <label className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+                  <div className="flex gap-2">
+                  <input type="checkbox" name="terms" id="terms" />
+                    <label htmlFor="terms">Accept our terms and condition</label>
+                  </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary hover:bg-slate-800 hover:text-white  bg-slate-400">Register</button>
                     </div>
@@ -99,6 +129,8 @@ if (password.length < 6){
                 }
                 <p className="text-center mb-4">All ready have an account! <Link to='/login' className="text-blue-700">Login</Link></p>
             </div>
+            {/* <ToastContainer /> */}
+
         </div>
     );
 };

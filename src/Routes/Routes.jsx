@@ -9,6 +9,7 @@ import GoogleLogin from "../Pages/GoogleLogin/GoogleLogin";
 import Github from "../Pages/Login/Github";
 import EmailLogin from "../Pages/Login/EmailLogin";
 import CardDetails from "../Pages/CardDetails";
+import PrivetRoutes from "./PrivetRoutes";
 
 
 
@@ -24,7 +25,7 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/cards/:id',
-                element:<CardDetails></CardDetails>
+                element:<PrivetRoutes><CardDetails></CardDetails></PrivetRoutes>
             },
             {
                 path:'/about',

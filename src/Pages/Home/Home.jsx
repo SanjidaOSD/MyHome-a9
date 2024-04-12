@@ -20,7 +20,7 @@ const Home = () => {
 
     // const {state_title, image, segment_name, status} = cards;
     useEffect(() => {
-        fetch('data.json')
+        fetch('/data.json')
             .then(res => res.json())
             .then(data => setCards(data))
     }, []);

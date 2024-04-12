@@ -18,7 +18,6 @@ const Navbar = () => {
     </>
 
 
-// const [loginUser, setLoginUser] = useState(null)
 
     const { logout, user } = UseAuth()
 
@@ -52,16 +51,22 @@ const Navbar = () => {
                             <div tabIndex={0} role="button" className="btn m-1">
                                 <div className="w-10 rounded-full">
                                     {/* <FaUserLarge /> */}
-                                    <img className="rounded-full" src={user.photoURL} alt="" />
+                                    <button onClick={logout} className="btn btn-ghost bg-slate-500">Logout</button>
+
+                                    {/* <img className="rounded-full" src={user.photoURL} alt="" /> */}
 
                                 </div>
                             </div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li>
-                                    <button className="btn btn-ghost">{user.displayName}</button>
+                                <img className="rounded-full" src={user.photoURL} alt="" />
+
                                 </li>
                                 <li>
-                                    <button onClick={logout} className="btn btn-ghost">Logout</button>
+                                <button className="btn btn-ghost">{user.displayName}</button>
+                                <button className="btn btn-ghost">{user.email}</button>
+
+                                    {/* <button onClick={logout} className="btn btn-ghost">Logout</button> */}
                                 </li>
                             </ul>
                         </div>

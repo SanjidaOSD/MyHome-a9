@@ -6,9 +6,8 @@ import Github from "./Github";
 const Login = () => {
 
     const { signInUser } = UseAuth();
-
-
     
+
     const onSubmit = data => {
         // console.log(data)
         const { email, password } = data;
@@ -16,6 +15,10 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
+               
+
+                // navigate after login
+
             })
             .catch(error => {
                 console.log(error);
