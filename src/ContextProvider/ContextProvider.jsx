@@ -38,6 +38,7 @@ const ContextProvider = ({ children }) => {
     const githubLogin = () =>{
         setLoading(true);
         return signInWithPopup(auth, githubProvider)
+
     }
 
     // log out

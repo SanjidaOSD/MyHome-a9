@@ -11,6 +11,9 @@ import EmailLogin from "../Pages/Login/EmailLogin";
 import CardDetails from "../Pages/CardDetails";
 import PrivetRoutes from "./PrivetRoutes";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Welcome from "../Pages/Welcome";
+import Reviews from "../Pages/Reviews";
 
 
 
@@ -37,6 +40,14 @@ const routes = createBrowserRouter([
                element:<PrivetRoutes><ContactUs></ContactUs></PrivetRoutes>
             },
             {
+                path:'/updateProfile',
+                element:<PrivetRoutes><UpdateProfile></UpdateProfile></PrivetRoutes>
+            },
+            {
+                path:'/review',
+                element:<PrivetRoutes><Reviews></Reviews></PrivetRoutes>
+            },
+            {
                 path:'/login',
                 element:<Login></Login>
             },
@@ -51,7 +62,11 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/register',
-                element:<Register></Register>
+                element:<Register></Register>,
+            },
+            {
+                path:'/welcome',
+                element:<Welcome></Welcome>
             }
         ]
     }

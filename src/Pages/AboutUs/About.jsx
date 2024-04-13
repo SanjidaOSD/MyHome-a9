@@ -14,21 +14,20 @@ import 'aos/dist/aos.css'; // ..
 AOS.init();
 
 
-
-
-
 const About = () => {
+   
     return (
 
         <div className='lg:mt-16'>
 
             <div data-aos="zoom-out-up" className="card card-side md:h-[600px] bg-base-100 shadow-xl">
-                <figure><img className='h-[200px] w-[300px]md:h-auto md:w-auto lg:h-auto lg:w-auto' src={aboutImg} alt="Movie" /></figure>
-                <div className="card-body text-center mx-auto md:mt-44">
+                <figure  data-aos="zoom-out-right"><img className='h-[200px] w-[300px]md:h-auto md:w-auto lg:h-auto lg:w-auto' src={aboutImg} alt="Movie" /></figure>
+                <div  data-aos="zoom-out-left" className="card-body text-center mx-auto md:mt-44">
                     <h2 className="card-title text-center justify-center lg:text-2xl font-bold">Why Choose Us?</h2>
                     <p className='lg:font-bold'>We offer high-quality products or services that meet or exceed customer expectations.</p>
                     <div className="card-actions justify-center md:mb-44">
                         <Link to='/contact' className="btn bg-slate-500">Contact Us</Link>
+                        <Link to='/review' className="btn bg-slate-500">See Customer Review</Link>
                     </div>
                 </div>
             </div>
@@ -93,7 +92,7 @@ const About = () => {
                 <div data-aos="flip-left" data-aos-duration="2000" className='mt-4 lg:mt-8'>
                     <div className="card w-96 bg-base-100 shadow-xl mt-16">
                         <figure className="px-10 pt-10">
-                        <BiSolidBuildingHouse className='h-[90px] w-[90px] lg:h-[90px] lg:w-[100px]'></BiSolidBuildingHouse>
+                            <BiSolidBuildingHouse className='h-[90px] w-[90px] lg:h-[90px] lg:w-[100px]'></BiSolidBuildingHouse>
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title font-bold">Shop and malls!</h2>
@@ -114,9 +113,11 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+          
+
+
         </div>
     );
 };

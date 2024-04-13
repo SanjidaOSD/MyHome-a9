@@ -1,8 +1,11 @@
 import UseAuth from "../../Hooks/UseAuth";
 import { FaGithub } from "react-icons/fa";
+import { toast } from 'react-toastify';
+
 
 const Github = () => {
   const { githubLogin } = UseAuth();
+
 
   return (
     <div>

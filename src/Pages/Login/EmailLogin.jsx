@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+import { toast } from 'react-toastify';
 
 
 const EmailLogin = () => {
@@ -28,13 +29,16 @@ const EmailLogin = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                
+                toast.success('User created successfully')
+
                 navigate(location?.state ? location.state : '/');
 
                 // Handle successful sign-in (e.g., redirect user)
             })
             .catch(error => {
                 console.log(error);
+                toast.error('Failed to sign in. Please try again.');
+
             })
     }
 
@@ -50,7 +54,7 @@ const EmailLogin = () => {
                         <input type="email" placeholder="email" name="email" className="input input-bordered  bg-slate-200" required
                             {...register("email", { required: true })}
                         />
-                        {errors.email && <span className="text-red-800">This field is required</span>}
+                      {errors.email && <span className="text-red-800">This field is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">

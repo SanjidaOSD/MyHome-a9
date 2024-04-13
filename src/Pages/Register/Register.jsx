@@ -4,7 +4,7 @@ import UseAuth from "../../Hooks/UseAuth";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-// import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -30,14 +30,17 @@ const Register = () => {
 
         if (password.length < 6) {
             setRegisterError('password should be at-least 6 character or longer')
+            toast.error('password should be at-least 6 character or longer')
             return;
         }
         else if (!/[A-Z]/.test(password)) {
             setRegisterError('Your password should have one upper case character')
+            toast.error('Your password should have one upper case character')
             return;
         }
         else if (!/[a-z]/.test(password)) {
             setRegisterError('Your password should have one lower case character')
+            toast.error('Your password should have one lower case character')
             return;
         }
 
@@ -50,12 +53,14 @@ const Register = () => {
 
             .then(result => {
                 console.log(result.user)
-                setSuccess('User created successfully')
+                toast.success('User created successfully')
 
             })
             .catch(error => {
                 console.log(error)
                 setRegisterError(error.message);
+                toast.error('Failed to sign in. Please try again.');
+
             })
 
     }
@@ -113,10 +118,10 @@ const Register = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
-                  <div className="flex gap-2">
-                  <input type="checkbox" name="terms" id="terms" />
-                    <label htmlFor="terms">Accept our terms and condition</label>
-                  </div>
+                    <div className="flex gap-2">
+                        <input type="checkbox" name="terms" id="terms" />
+                        <label htmlFor="terms">Accept our terms and condition</label>
+                    </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary hover:bg-slate-800 hover:text-white  bg-slate-400">Register</button>
                     </div>
@@ -125,7 +130,7 @@ const Register = () => {
                     registerError && <p className="text-red-800 p-4">{registerError}</p>
                 }
                 {
-                    success && <p className="text-green-700 text-center">{success}</p>
+                (success && <p className="text-green-700 text-center">{success}</p>)
                 }
                 <p className="text-center mb-4">All ready have an account! <Link to='/login' className="text-blue-700">Login</Link></p>
             </div>

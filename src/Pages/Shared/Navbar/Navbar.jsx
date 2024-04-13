@@ -9,16 +9,22 @@ import UseAuth from "../../../Hooks/UseAuth";
 
 const Navbar = () => {
 
+    const { logout, user } = UseAuth()
+
+
     const navLink = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About us</NavLink></li>
-        <li><NavLink to='/contact'>Contact Us</NavLink></li>
 
+        {user && <>
+            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+            <li><NavLink to='/contact'>Contact Us</NavLink></li>
+        </>}
     </>
 
 
 
-    const { logout, user } = UseAuth()
+    // const { logout, user } = UseAuth()
 
     return (
         <div>
@@ -34,7 +40,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex">
-                        <a className="btn btn-ghost text-3xl"><GiFamilyHouse />MyHome</a>
+                        <a className="btn btn-ghost text-3xl"><GiFamilyHouse /><span className="text-red-800">MyHome</span></a>
 
                     </div>
                 </div>
@@ -58,12 +64,12 @@ const Navbar = () => {
                             </div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li>
-                                <img className="rounded-full" src={user.photoURL} alt="" />
+                                    <img className="rounded-full" src={user.photoURL} alt="" />
 
                                 </li>
                                 <li>
-                                <button className="btn btn-ghost">{user.displayName}</button>
-                                <button className="btn btn-ghost">{user.email}</button>
+                                    <button className="btn btn-ghost">{user.displayName}</button>
+                                    <button className="btn btn-ghost">{user.email}</button>
 
                                     {/* <button onClick={logout} className="btn btn-ghost">Logout</button> */}
                                 </li>

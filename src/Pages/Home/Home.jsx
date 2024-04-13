@@ -3,10 +3,13 @@ import Slider from "../../Components/Slider";
 import { IoHome } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdArrowDropright } from "react-icons/io";
+import searchImg from '../../assets/search.png'
+import contactImg from '../../assets/contact (2).png'
+import enjoyImg from '../../assets/enjoy.png'
 
 // AOS
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
 // ..
 AOS.init();
@@ -58,6 +61,41 @@ const Home = () => {
                             </div>
                         </div>)
                     }
+                </div>
+            </div>
+            {/* 3steps */}
+            <p className=" text-center justify-center text-4xl font-bold text-red-900 mt-24 lg:mt-32 mb-16">3 Simple Steps</p>
+            <div className="lg:flex justify-around gap-6">
+                <div data-aos="zoom-out-right" className="card shadow-2xl">
+                    <figure className="px-10 pt-10">
+                        <img src={searchImg} alt="Shoes" className="rounded-xl h-36 w-36" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Search Property</h2>
+                        <p>Are you looking a beautiful and gorgeous property?</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000" className="card shadow-2xl">
+                    <figure className="px-10 pt-10">
+                        <img src={contactImg} alt="Shoes" className="rounded-xl h-36 w-36" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Contact Us</h2>
+                        <p>Dont'Worry contact with us.</p>
+
+                    </div>
+                </div>
+                <div data-aos="zoom-out-left" className="card shadow-xl">
+                    <figure className="px-10 pt-10">
+                        <img src={enjoyImg} alt="Shoes" className="rounded-xl h-36 w-36" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title">Enjoy Property</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                    </div>
                 </div>
             </div>
 
