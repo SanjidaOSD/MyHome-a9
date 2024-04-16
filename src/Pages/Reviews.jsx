@@ -6,6 +6,7 @@ import { IoStar } from "react-icons/io5";
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // ..
+import { Helmet } from 'react-helmet';
 AOS.init();
 
 const Reviews = () => {
@@ -19,6 +20,11 @@ const Reviews = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Customer reviews</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className='flex text-3xl font-bold text-center justify-center text-red-800 mt-12'>
                 <FcCloseUpMode />
                 Our Customer Reviews
@@ -27,7 +33,7 @@ const Reviews = () => {
             <div data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1000"
-             className="md:grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-16 mt-16">
+                className="md:grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-16 mt-16">
 
                 {
                     customerReviews.map(review => (

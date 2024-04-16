@@ -2,9 +2,9 @@ import { GiFamilyHouse } from "react-icons/gi";
 
 const Footer = () => {
     return (
-        <div className="md:mt-24">
+        <div className="md:mt-24 ">
             <hr />
-<footer className="footer p-10 bg-White text-black">
+<footer className="footer p-10 bg-White text-black lg:w-auto w-96">
   <aside>
   <GiFamilyHouse className="font-extrabold w-12 h-16"></GiFamilyHouse>
     <p className="font-bold"><span className="text-red-800 text-2xl">HOME</span> Industries Ltd.<br/>Providing reliable tech since 1992</p>

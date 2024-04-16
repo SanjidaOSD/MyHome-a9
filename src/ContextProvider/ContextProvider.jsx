@@ -41,6 +41,12 @@ const ContextProvider = ({ children }) => {
 
     }
 
+    // update profile
+    const updateProfile = () =>{
+        setLoading(true);
+        return updateProfile(auth.currentUser)
+    }
+
     // log out
     const logout = () =>{
         setUser(null)
@@ -70,6 +76,8 @@ const ContextProvider = ({ children }) => {
         googleLogin,
         githubLogin,
         logout,
+        updateProfile
+
 
     }
 

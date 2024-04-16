@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -67,6 +68,11 @@ const Register = () => {
 
     return (
         <div>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Register</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className="text-3xl text-center mt-6 mb-6 font-bold">Please Register</h2>
             <div className="card shrink-0 w-full max-w-sm mx-auto shadow-2xl bg-base-100">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">

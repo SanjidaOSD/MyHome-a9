@@ -4,16 +4,23 @@ import contactImg from '../../assets/contact.png'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // ..
+import { Helmet } from 'react-helmet';
 AOS.init();
 
 const ContactUs = () => {
+
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>ContactUs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
 
             <div data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1000"
-             className="hero min-h-screen">
+                className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
@@ -48,7 +55,7 @@ const ContactUs = () => {
                 <hr />
 
 
-                <div className='flex justify-around mt-4'>
+                <div className='lg:flex justify-around mt-4'>
                     <div>
                         <div className="collapse collapse-arrow bg-base-200">
                             <input type="radio" name="my-accordion-2" defaultChecked />

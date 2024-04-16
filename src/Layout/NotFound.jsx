@@ -1,6 +1,13 @@
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
     return (
+        <div>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>User Not Found</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <div className="text-center">
             <h1 className="text-[200px] md:text-[400px] font-bold">
                 404
@@ -9,6 +16,7 @@ const NotFound = () => {
                 NOT FOUND
             </h2>
             
+        </div>
         </div>
     );
 };

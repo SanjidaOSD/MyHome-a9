@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet";
 
 
 const EmailLogin = () => {
@@ -44,6 +45,11 @@ const EmailLogin = () => {
 
     return (
         <div>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Email log in</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className="text-3xl text-center mt-6 mb-6 font-bold">Login Form</h2>
             <div className="card shrink-0 w-full max-w-sm mx-auto shadow-2xl p-4">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">

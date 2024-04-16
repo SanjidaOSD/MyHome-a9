@@ -11,6 +11,7 @@ import enjoyImg from '../../assets/enjoy.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 // ..
 AOS.init();
 
@@ -29,7 +30,13 @@ const Home = () => {
     }, []);
 
     return (
+
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div className="mt-24">
                 <Slider></Slider>
             </div>
@@ -65,7 +72,7 @@ const Home = () => {
             </div>
             {/* 3steps */}
             <p className=" text-center justify-center text-4xl font-bold text-red-900 mt-24 lg:mt-32 mb-16">3 Simple Steps</p>
-            <div className="lg:flex justify-around gap-6">
+            <div className="lg:flex justify-around gap-6 ">
                 <div data-aos="zoom-out-right" className="card shadow-2xl">
                     <figure className="px-10 pt-10">
                         <img src={searchImg} alt="Shoes" className="rounded-xl h-36 w-36" />
@@ -77,7 +84,7 @@ const Home = () => {
                 </div>
                 <div data-aos="fade-up"
                     data-aos-easing="linear"
-                    data-aos-duration="1000" className="card shadow-2xl">
+                    data-aos-duration="1500" className="card shadow-2xl">
                     <figure className="px-10 pt-10">
                         <img src={contactImg} alt="Shoes" className="rounded-xl h-36 w-36" />
                     </figure>

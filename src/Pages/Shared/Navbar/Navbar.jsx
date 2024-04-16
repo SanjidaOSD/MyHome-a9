@@ -10,6 +10,7 @@ import UseAuth from "../../../Hooks/UseAuth";
 const Navbar = () => {
 
     const { logout, user } = UseAuth()
+    console.log(user);
 
 
     const navLink = <>
@@ -51,33 +52,37 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end">
+
+
                     {
-                        user?.email ? <div className="dropdown dropdown-hover">
+                        user?.email ?
+                         <div className="dropdown dropdown-hover">
                             <div tabIndex={0} role="button" className="btn m-1">
+
+
                                 <div className="w-10 rounded-full">
                                     {/* <FaUserLarge /> */}
-                                    <button onClick={logout} className="btn btn-ghost hover:bg-slate-500 bg-slate-500">Logout</button>
+                                    {/* <button onClick={logout} className="btn btn-ghost hover:bg-slate-500 bg-slate-500">Logout</button> */}
 
-                                    {/* <img className="rounded-full" src={user.photoURL} alt="" /> */}
+                                    <img className="rounded-full" src={user.photoURL} alt="" />
 
                                 </div>
                             </div>
-                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+                                {/* <li>
                                     <img className="rounded-full" src={user.photoURL} alt="" />
 
-                                </li>
+                                </li> */}
                                 <li>
                                     <button className="btn btn-ghost">{user.displayName}</button>
-                                    <button className="btn btn-ghost">{user.email}</button>
+                                    {/* <button className="btn btn-ghost">{user.email}</button> */}
 
-                                    {/* <button onClick={logout} className="btn btn-ghost">Logout</button> */}
+                                    <button onClick={logout} className="btn btn-ghost">Logout</button>
                                 </li>
                             </ul>
                         </div>
                             :
                             <Link to='/login'><button className="btn btn-active hover:bg-slate-800 hover:text-white">Login</button></Link>
-
                     }
 
                 </div>
