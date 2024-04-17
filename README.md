@@ -1,7 +1,8 @@
 # HOME
 
-## Live Link:
-Write your project's live link here.
+## Live Link: https://euphonious-basbousa-e03e80.netlify.app/welcome
+## Github Link: https://github.com/programming-hero-web-course-4/b9a9-real-estate-SanjidaOSD
+
 
 ## Technologies Used:
 - React: Utilizing the JavaScript library React for building user interfaces.
