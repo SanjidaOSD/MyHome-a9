@@ -1,6 +1,7 @@
 # HOME
 
-## Live Link: https://euphonious-basbousa-e03e80.netlify.app/welcome
+## Live Link: https://polite-granita-3a8f25.netlify.app/
+
 ## Github Link: https://github.com/programming-hero-web-course-4/b9a9-real-estate-SanjidaOSD
 
 
