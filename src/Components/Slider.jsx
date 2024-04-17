@@ -10,13 +10,19 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-import { Navigation } from 'swiper/modules';
+import { Navigation,Autoplay } from 'swiper/modules';
 
 const Slider = () => {
     return (
         <div>
            <div>
-           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+           <Swiper navigation={true} 
+           modules={[Navigation, Autoplay]}
+            loop={true}
+            autoplay={
+                {delay: 2000}
+            } 
+            className="mySwiper">
                 <SwiperSlide><div className='w-full h-[auto]'>
                 <img src={house2} alt="" />
             </div></SwiperSlide>

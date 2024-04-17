@@ -5,15 +5,15 @@ import About from "../Pages/AboutUs/About";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NotFound from "../Layout/NotFound";
-import GoogleLogin from "../Pages/GoogleLogin/GoogleLogin";
+// import GoogleLogin from "../Pages/GoogleLogin/GoogleLogin";
 import Github from "../Pages/Login/Github";
 import EmailLogin from "../Pages/Login/EmailLogin";
 import CardDetails from "../Pages/CardDetails";
 import PrivetRoutes from "./PrivetRoutes";
 import ContactUs from "../Pages/ContactUs/ContactUs";
-import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Welcome from "../Pages/Welcome";
 import Reviews from "../Pages/Reviews";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 
 
 

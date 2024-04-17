@@ -2,8 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { GiFamilyHouse } from "react-icons/gi";
 import UseAuth from "../../../Hooks/UseAuth";
 // import { FaUserLarge } from "react-icons/fa6";
-// import { useState } from "react";
-
+import { FcBusinesswoman } from "react-icons/fc";
 
 
 
@@ -64,7 +63,7 @@ const Navbar = () => {
                                     {/* <FaUserLarge /> */}
                                     {/* <button onClick={logout} className="btn btn-ghost hover:bg-slate-500 bg-slate-500">Logout</button> */}
 
-                                    <img className="rounded-full" src={user.photoURL} alt="" />
+                                    <img className="rounded-full" src={user?.photoURL || <FcBusinesswoman /> } alt="" />
 
                                 </div>
                             </div>
@@ -74,10 +73,10 @@ const Navbar = () => {
 
                                 </li> */}
                                 <li>
-                                    <button className="btn btn-ghost">{user.displayName}</button>
+                                    <button className="btn btn-ghost">{user?.displayName || 'not found'}</button>
                                     {/* <button className="btn btn-ghost">{user.email}</button> */}
 
-                                    <button onClick={logout} className="btn btn-ghost">Logout</button>
+                                    <button onClick={logout} className="btn text-white bg-slate-600 hover:bg-slate-600">Logout</button>
                                 </li>
                             </ul>
                         </div>

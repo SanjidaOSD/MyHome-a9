@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import UseAuth from "../../Hooks/UseAuth";
 import { useState } from "react";
@@ -22,6 +22,10 @@ const Register = () => {
         formState: { errors },
 
     } = useForm()
+
+    // Navigation system
+    const navigate = useNavigate();
+    const from = '/login';
 
 
     const onSubmit = data => {
@@ -49,13 +53,12 @@ const Register = () => {
         setRegisterError('');
         setSuccess('');
 
+        // create user and updateProfile
         createUser(email, password)
-
-
             .then(result => {
                 console.log(result.user)
                 toast.success('User created successfully')
-
+                navigate(from)
             })
             .catch(error => {
                 console.log(error)
@@ -68,7 +71,7 @@ const Register = () => {
 
     return (
         <div>
-             <Helmet>
+            <Helmet>
                 <meta charSet="utf-8" />
                 <title>Register</title>
                 <link rel="canonical" href="http://mysite.com/example" />
@@ -136,7 +139,7 @@ const Register = () => {
                     registerError && <p className="text-red-800 p-4">{registerError}</p>
                 }
                 {
-                (success && <p className="text-green-700 text-center">{success}</p>)
+                    (success && <p className="text-green-700 text-center">{success}</p>)
                 }
                 <p className="text-center mb-4">All ready have an account! <Link to='/login' className="text-blue-700">Login</Link></p>
             </div>

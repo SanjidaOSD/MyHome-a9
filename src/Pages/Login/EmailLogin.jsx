@@ -15,7 +15,7 @@ const EmailLogin = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-    console.log('location in the login page', location)
+    // console.log('location in the login page', location)
 
 
     const {
