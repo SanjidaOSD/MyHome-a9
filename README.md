@@ -1,6 +1,6 @@
 # HOME
 
-## Live Link: https://polite-granita-3a8f25.netlify.app/
+## Live Link: https://wondrous-smakager-414fdd.netlify.app/
 
 ## Github Link: https://github.com/programming-hero-web-course-4/b9a9-real-estate-SanjidaOSD
 
