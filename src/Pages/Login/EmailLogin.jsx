@@ -34,7 +34,7 @@ const EmailLogin = () => {
 
                 navigate(location?.state ? location.state : '/');
 
-                // Handle successful sign-in (e.g., redirect user)
+                
             })
             .catch(error => {
                 console.log(error);

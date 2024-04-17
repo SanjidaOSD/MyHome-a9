@@ -1,8 +1,16 @@
-# MyHome
+# HOME
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link:
+Write your project's live link here.
 
-Currently, two official plugins are available:
+## Technologies Used:
+- React: Utilizing the JavaScript library React for building user interfaces.
+- Firebase: Utilizing Firebase platform for backend services such as authentication and database management.
+- Vite: Employing Vite for modern web development tooling, providing a fast and efficient development environment.
+- Tailwind CSS: Utilizing Tailwind CSS for rapid UI development, allowing for quick styling and customization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+
+- AOS Package: Implementing AOS (Animate On Scroll) package for adding smooth animations to elements as they come into view.
+- React Hook Form: Integrating React Hook Form for managing and validating form inputs in a React application.
+- Swiper Slider: Utilizing Swiper slider for creating responsive and interactive image sliders and carousels.

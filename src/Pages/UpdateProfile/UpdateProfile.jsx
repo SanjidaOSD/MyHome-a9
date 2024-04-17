@@ -2,12 +2,10 @@ import { useForm } from "react-hook-form";
 import auth from "../../Firebase/Firebase.config";
 import { updateProfile } from "firebase/auth";
 import { Helmet } from "react-helmet";
-// import UseAuth from "../../Hooks/UseAuth";
+import { toast } from 'react-toastify';
+
 
 const UpdateProfile = () => {
-    // const { updateProfile } = UseAuth();
-
-
 
     const {
         register,
@@ -27,7 +25,7 @@ const UpdateProfile = () => {
           })
           .then(result => {
             console.log(result);
-            // toast.success('User created successfully')
+            toast.success('User created successfully')
 
 
         })
