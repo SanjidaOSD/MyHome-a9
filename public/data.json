@@ -1,0 +1,75 @@
+[
+    {
+      "id": "1",
+      "state_title": "Luxurious Downtown Apartment",
+      "segment_name": "Apartment",
+      "description": "Stunning modern apartment located in the heart of downtown. Features breathtaking city views, spacious rooms, and top-notch amenities.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "2000 sq. ft.",
+      "location": "Downtown, City X",
+      "facilities": ["Swimming pool", "Gym", "24/7 Security"],
+      "image": "https://i.ibb.co/y5567yH/luxury-home-389263-640.jpg"
+    },
+    {
+      "id": "2",
+      "state_title": "Charming Townhouse in Suburban Oasis",
+      "segment_name": "Townhouse",
+      "description": "Beautiful townhouse nestled in a serene suburban neighborhood. Offers spacious living areas, private patio, and community amenities.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "1800 sq. ft.",
+      "location": "Suburbia Estates, City Y",
+      "facilities": ["Community pool", "Tennis courts", "Playground"],
+      "image": "https://i.ibb.co/B6TcWC5/large-home-389271-640.jpg"
+    },
+    {
+      "id": "3",
+      "state_title": "Cozy Single-Family Home with Garden",
+      "segment_name": "Single-family home",
+      "description": "Lovely single-family home featuring a spacious garden perfect for outdoor gatherings. Offers comfortable living in a family-friendly neighborhood.",
+      "price": "$850,000",
+      "status": "sale",
+      "area": "2200 sq. ft.",
+      "location": "Family Haven, City Z",
+      "facilities": ["Fenced yard", "Outdoor dining area", "Fireplace"],
+      "image": "https://i.ibb.co/T8ts0ZP/window-7169327-640.jpg"
+    },
+    {
+      "id": "4",
+      "state_title": "Modern Student Housing Complex",
+      "segment_name": "Student housing",
+      "description": "State-of-the-art student housing complex offering stylish living spaces and convenient amenities tailored for student life.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "500 sq. ft. (per unit)",
+      "location": "University Campus, City X",
+      "facilities": ["Study lounges", "Fitness center", "Laundry facilities"],
+      "image": "https://i.ibb.co/nMHXZdN/furniture-998265-640.jpg"
+    },
+    {
+      "id": "5",
+      "state_title": "Senior Living Community Retreat",
+      "segment_name": "Senior living community",
+      "description": "Retirement community designed for active seniors seeking a vibrant and fulfilling lifestyle. Offers various activities, social events, and care services.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1200 sq. ft. (per unit)",
+      "location": "Elderly Haven, City Y",
+      "facilities": ["Community clubhouse", "Scheduled transportation", "On-site healthcare"],
+      "image": "https://i.ibb.co/k15cQgb/house-1477041-640.jpg"
+    },
+    {
+      "id": "6",
+      "state_title": "Relaxing Vacation Rental by the Beach",
+      "segment_name": "Vacation rental",
+      "description": "Idyllic vacation rental offering beachfront views and a tranquil atmosphere. Perfect for a relaxing getaway with family and friends.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1000 sq. ft.",
+      "location": "Seaside Retreat, City Z",
+      "facilities": ["Private beach access", "Outdoor grill", "Oceanfront balcony"],
+      "image": "https://i.ibb.co/jDw0Ngq/house-1836070-640.jpg"
+    }
+  ]
+  
